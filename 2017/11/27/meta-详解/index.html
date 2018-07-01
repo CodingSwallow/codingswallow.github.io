@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="html,meta,元数据," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="元数据和&amp;lt;meta&amp;gt;元数据是描述以提供关于其他数据的数据，在meta中，html document是被描述的数据，meta标签中包括的数据是描述html document的元数据。这些元数据不会在页面中展示，但是会被机器解析。meta标签是为了指定页面的描述，关键词，作者，最后一次修改等元数据，也就是说meta标签就是为了让文档的元数据有个安身之所，meta标签是盛放document元数据的">
+<meta name="keywords" content="html,meta,元数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="meta详解">
+<meta property="og:url" content="http://yoursite.com/2017/11/27/meta-详解/index.html">
+<meta property="og:site_name" content="CodingSwallow">
+<meta property="og:description" content="元数据和&amp;lt;meta&amp;gt;元数据是描述以提供关于其他数据的数据，在meta中，html document是被描述的数据，meta标签中包括的数据是描述html document的元数据。这些元数据不会在页面中展示，但是会被机器解析。meta标签是为了指定页面的描述，关键词，作者，最后一次修改等元数据，也就是说meta标签就是为了让文档的元数据有个安身之所，meta标签是盛放document元数据的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/07/01/5b3880e7bc329.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/01/5b3880e7aa21a.png">
+<meta property="og:updated_time" content="2018-07-01T07:45:06.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="meta详解">
+<meta name="twitter:description" content="元数据和&amp;lt;meta&amp;gt;元数据是描述以提供关于其他数据的数据，在meta中，html document是被描述的数据，meta标签中包括的数据是描述html document的元数据。这些元数据不会在页面中展示，但是会被机器解析。meta标签是为了指定页面的描述，关键词，作者，最后一次修改等元数据，也就是说meta标签就是为了让文档的元数据有个安身之所，meta标签是盛放document元数据的">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/01/5b3880e7bc329.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/27/meta-详解/"/>
+
+
+
+
+
+  <title>meta详解 | CodingSwallow</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CodingSwallow</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">my notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/meta-详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tomato">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar3.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CodingSwallow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">meta详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-27T11:45:46+08:00">
+                2017-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="元数据和-lt-meta"><a href="#元数据和-lt-meta" class="headerlink" title="元数据和&lt;meta>"></a>元数据和&lt;meta></h2><p>元数据是描述以提供关于其他数据的数据，在meta中，html document是被描述的数据，meta标签中包括的数据是描述html document的元数据。这些元数据不会在页面中展示，但是会被机器解析。meta标签是为了指定页面的描述，关键词，作者，最后一次修改等元数据，也就是说meta标签就是为了让文档的元数据有个安身之所，meta标签是盛放document元数据的地方。</p>
+<h2 id="lt-meta-标签属性"><a href="#lt-meta-标签属性" class="headerlink" title="&lt;meta>标签属性"></a>&lt;meta>标签属性</h2><h3 id="charset"><a href="#charset" class="headerlink" title="charset"></a>charset</h3><ul>
+<li>作用：指定HTML文档的字符编码，一般使用UTF-8</li>
+<li>值：character_set</li>
+<li><p>例子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意：html5和html4.01在定义charset的时候有所不同</p>
+<ul>
+<li><p>HTML 4.01</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HTML5</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="content"><a href="#content" class="headerlink" title="content"></a>content</h3><ul>
+<li>作用：给出与http-equiv或name属性相关的值</li>
+<li>值：text</li>
+<li><p>例子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"Free Web tutorials on HTML and CSS"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意：如果定义了name或http-equiv属性，则必须定义content属性。 如果没有定义这些内容属性，则不能定义内容属性。</p>
+</li>
+</ul>
+<h3 id="http-equiv"><a href="#http-equiv" class="headerlink" title="http-equiv"></a>http-equiv</h3><p>作用：为content属性的信息/值提供HTTP header</p>
+<p>(1)　content-type（已过时）<br>设定页面使用的字符集<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset='UTF-8'"</span>&gt;</span>(非html5)</span><br></pre></td></tr></table></figure></p>
+<p>(2)　content-language（已过时）<br>设定主页制作使用的文字语言<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-language"</span> <span class="attr">content</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>(3)　Pragma<br>禁止浏览器从本地计算机的缓存中访问页面内容<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>(4)　expires<br>指定网页在缓存中的过期时间，一旦网页过期，必须到服务器上重新调阅，时间格式必须是GMT<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"expires"</span> <span class="attr">content</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"expires"</span> <span class="attr">content</span>=<span class="string">"Wed, 26 Feb 1997 08:21:57 GMT"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>(5)　cache-control<br>指定请求和响应遵循的缓存机制。共有以下几种用法：</p>
+<ul>
+<li>no-cache: 先发送请求，与服务器确认该资源是否被更改，如果未被更改，则使用缓存。</li>
+<li>no-store: 不允许缓存，每次都要去服务器上，下载完整的响应。（安全措施）</li>
+<li>public : 缓存所有响应，但并非必须。因为max-age也可以做到相同效果</li>
+<li>private : 只为单个用户缓存，因此不允许任何中继进行缓存。（比如说CDN就不允许缓存private的响应）</li>
+<li>max-age : 表示当前请求开始，该响应在多久内能被缓存和重用，而不去服务器重新请求。例如：max-age=60表示响应可以再缓存和重用 60 秒。</li>
+</ul>
+<p>(6)　refresh<br>该指令指定：</p>
+<ul>
+<li>如果content属性只包含一个正整数，则表示该页面重新加载的秒数。</li>
+<li>如果content属性包含一个正整数，后跟字符串’; url =’，那么表示当前页面XX秒后重定向到另一个有效的URL。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"2；URL=http://www.github.com/"</span>&gt;</span> //意思是2秒后跳转到github</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(7)　X-UA-Compatible<br>用于告知浏览器以何种版本来渲染页面。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>/&gt;</span> //指定IE和Chrome使用最新版本渲染当前页面</span><br></pre></td></tr></table></figure></p>
+<h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><ul>
+<li>作用：元数据名</li>
+<li><p>keywords<br>为搜索引擎定义keywords关键词</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"HTML, CSS, XML, XHTML, JavaScript"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>description<br>网页具体内容描述</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"Free Web tutorials on HTML and CSS"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>author<br>定义网页作者</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"John Doe"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>refresh<br>每n秒更新document</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"30"</span>&gt;</span>//每30秒更新document</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>viewport<br>设置viewport，使您的网站在所有设备上看起来不错<a href="https://segmentfault.com/a/1190000004978598" target="_blank" rel="noopener">viewport详解</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">//content="with=device-width"表示网页宽度更随屏幕宽度</span><br><span class="line">//initial-scale=1.0 设置浏览器首次加载页面时的初始缩放级别</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>application-name<br>定义在网页中运行的应用程序的名称</p>
+</li>
+<li>generator<br>用于标明网页是什么软件做的</li>
+<li><p>revisit-after<br>如果页面不是经常更新，为了减轻搜索引擎爬虫对服务器带来的压力，可以设置一个爬虫的重访时间。如果重访时间过短，爬虫将按它们定义的默认时间来访问。举例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"revisit-after"</span> <span class="attr">content</span>=<span class="string">"7 days"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>renderer<br>renderer是为双核浏览器准备的，用于指定双核浏览器默认以何种方式渲染页面。比如说360浏览器。举例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span> //默认webkit内核</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-comp"</span>&gt;</span> //默认IE兼容模式</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-stand"</span>&gt;</span> //默认IE标准模式</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>robots<br>robots用来告诉爬虫页面是否需要索引</p>
+</li>
+</ul>
+<h3 id="schema"><a href="#schema" class="headerlink" title="schema"></a>schema</h3><ul>
+<li>作用：定义 content 属性值的格式</li>
+<li><p>例子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"revised"</span> <span class="attr">content</span>=<span class="string">"2017-11-27"</span> <span class="attr">scheme</span>=<span class="string">"YYYY-MM-DD"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意：html5不支持<br>有关元数据名的具体信息详见<a href="https://www.metatags.org/meta_name_keywords" target="_blank" rel="noopener">https://www.metatags.org/meta_name_keywords</a></p>
+</li>
+</ul>
+<h2 id="lt-meta-和Open-Graph-protocol"><a href="#lt-meta-和Open-Graph-protocol" class="headerlink" title="&lt;meta>和Open Graph protocol"></a>&lt;meta>和Open Graph protocol</h2><h3 id="Open-Graph-protocol介绍"><a href="#Open-Graph-protocol介绍" class="headerlink" title="Open Graph protocol介绍"></a>Open Graph protocol介绍</h3><blockquote>
+<p>The Open Graph protocol enables any web page to become a rich object in a social graph. For instance, this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.</p>
+</blockquote>
+<p>Open Graph Protocol使得任何网页成为一个社交网络的“富媒体”对象，比如在Facebook上使用这个功能来允许任何网页与Facebook上的任何其他对象具有相同的功能。<br>如图：<a href="https://blog.kissmetrics.com/open-graph-meta-tags/" target="_blank" rel="noopener">来源于</a><br><img src="https://i.loli.net/2018/07/01/5b3880e7bc329.png" alt=""></p>
+<h3 id="Open-Graph-protocol元数据"><a href="#Open-Graph-protocol元数据" class="headerlink" title="Open Graph protocol元数据"></a>Open Graph protocol元数据</h3><h4 id="1-og-title"><a href="#1-og-title" class="headerlink" title="1. og:title"></a>1. og:title</h4><p>定义内容标题。 它与代码中的传统meta title具有相似的用途。 事实上，如果Facebook在你的页面上没有找到og:title标签，它就会使用meta title。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">”og:title”</span> <span class="attr">content</span>=<span class="string">”Your</span> <span class="attr">eye-catching</span> <span class="attr">title</span> <span class="attr">here</span>” /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2-og-url"><a href="#2-og-url" class="headerlink" title="2. og:url"></a>2. og:url</h4><p>定义即将分享的页面的规范url<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">”og:url”</span> <span class="attr">content</span>=<span class="string">”http://www.yourdomain.com”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="3-og-type"><a href="#3-og-type" class="headerlink" title="3. og:type"></a>3. og:type</h4><p>这是你如何描述你分享的对象的类型：博客文章，视频，图片，或其他。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">”og:type”</span> <span class="attr">content</span>=<span class="string">”website”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="4-og-description"><a href="#4-og-description" class="headerlink" title="4. og:description"></a>4. og:description</h4><p>这个元数据描述符与HTML中的meta description非常相似。 这是描述内容的地方，但不是它显示在搜索引擎结果页上，而是显示在Facebook上的链接标题下方。<br>不像一般的元描述标签，它不会影响你的搜索引擎优化。og:description不限于字符数，但最好使用大约200个字母。 在某些情况下，根据链接/标题/域名，Facebook最多可显示300个字符，但建议200。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">”og:description”</span> <span class="attr">content</span>=<span class="string">”Your</span> <span class="attr">entertaining</span> <span class="attr">and</span> <span class="attr">descriptive</span> <span class="attr">copy</span> <span class="attr">here</span>, <span class="attr">if</span> <span class="attr">your</span> <span class="attr">meta</span> <span class="attr">description</span> <span class="attr">is</span> <span class="attr">good</span>, <span class="attr">use</span> <span class="attr">it.</span>” /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5-og-image"><a href="#5-og-image" class="headerlink" title="5. og:image"></a>5. og:image</h4><p>在共享网页时显示的图片。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">”og:image”</span> <span class="attr">content</span>=<span class="string">”http://www.yourdomain.com/image-name.jpg”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="6-og-locale"><a href="#6-og-locale" class="headerlink" title="6. og:locale"></a>6. og:locale</h4><p>定义语言，默认美式英语</p>
+<h4 id="7-og-site-name"><a href="#7-og-site-name" class="headerlink" title="7. og:site_name"></a>7. og:site_name</h4><p>如果您正在共享的页面（对象）是更大的网络的一部分</p>
+<h4 id="8-og-audio-or-og-video"><a href="#8-og-audio-or-og-video" class="headerlink" title="8. og:audio or og:video"></a>8. og:audio or og:video</h4><p>添加额外的音频或视频文件</p>
+<h4 id="9-fb-app-id"><a href="#9-fb-app-id" class="headerlink" title="9. fb:app_id"></a>9. fb:app_id</h4><p>用于链接Facebook应用程序（例如，FB评论）与对象</p>
+<h3 id="twitter-cards"><a href="#twitter-cards" class="headerlink" title="twitter cards"></a>twitter cards</h3><p><img src="https://i.loli.net/2018/07/01/5b3880e7aa21a.png" alt=""></p>
+<p>open graph protocal来源于<a href="https://blog.kissmetrics.com/open-graph-meta-tags/" target="_blank" rel="noopener">https://blog.kissmetrics.com/open-graph-meta-tags/</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+            <a href="/tags/meta/" rel="tag"># meta</a>
+          
+            <a href="/tags/元数据/" rel="tag"># 元数据</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/24/语义化标签理解/" rel="next" title="语义化标签理解">
+                <i class="fa fa-chevron-left"></i> 语义化标签理解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/01/cookie-sessionStorage-localStorage区别/" rel="prev" title="cookie,sessionStorage,localStorage区别">
+                cookie,sessionStorage,localStorage区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar/avatar3.jpg"
+                alt="tomato" />
+            
+              <p class="site-author-name" itemprop="name">tomato</p>
+              <p class="site-description motion-element" itemprop="description">番茄小笼包的胡言乱语，go!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#元数据和-lt-meta"><span class="nav-number">1.</span> <span class="nav-text">元数据和&lt;meta&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-meta-标签属性"><span class="nav-number">2.</span> <span class="nav-text">&lt;meta&gt;标签属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#charset"><span class="nav-number">2.1.</span> <span class="nav-text">charset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content"><span class="nav-number">2.2.</span> <span class="nav-text">content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http-equiv"><span class="nav-number">2.3.</span> <span class="nav-text">http-equiv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name"><span class="nav-number">2.4.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#schema"><span class="nav-number">2.5.</span> <span class="nav-text">schema</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-meta-和Open-Graph-protocol"><span class="nav-number">3.</span> <span class="nav-text">&lt;meta&gt;和Open Graph protocol</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Open-Graph-protocol介绍"><span class="nav-number">3.1.</span> <span class="nav-text">Open Graph protocol介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Open-Graph-protocol元数据"><span class="nav-number">3.2.</span> <span class="nav-text">Open Graph protocol元数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-og-title"><span class="nav-number">3.2.1.</span> <span class="nav-text">1. og:title</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-og-url"><span class="nav-number">3.2.2.</span> <span class="nav-text">2. og:url</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-og-type"><span class="nav-number">3.2.3.</span> <span class="nav-text">3. og:type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-og-description"><span class="nav-number">3.2.4.</span> <span class="nav-text">4. og:description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-og-image"><span class="nav-number">3.2.5.</span> <span class="nav-text">5. og:image</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-og-locale"><span class="nav-number">3.2.6.</span> <span class="nav-text">6. og:locale</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-og-site-name"><span class="nav-number">3.2.7.</span> <span class="nav-text">7. og:site_name</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-og-audio-or-og-video"><span class="nav-number">3.2.8.</span> <span class="nav-text">8. og:audio or og:video</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-fb-app-id"><span class="nav-number">3.2.9.</span> <span class="nav-text">9. fb:app_id</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#twitter-cards"><span class="nav-number">3.3.</span> <span class="nav-text">twitter cards</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tomato</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
